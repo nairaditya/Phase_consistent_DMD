@@ -16,7 +16,13 @@ addpath('../Functions');
 
 %% Load Dataset
 
-load('../Data/cylinder_dataset.mat');      % Dataset
+load('../Data/vorticity_data1.mat');      % Dataset 1
+load('../Data/vorticity_data2.mat');      % Dataset 2
+load('../Data/fullCoords.mat');      % Dataset 2
+d(1).VORT = vort_data1;d(2).VORT = vort_data2;
+d(1).X = xx1;d(2).X = xx2;
+d(1).Y = yy1;d(2).Y = yy2;
+mv(1).VORT = mean(vort_data1,3);mv(2).VORT = mean(vort_data2,3);
 % d (Data in each overlapping window),
 % mv (Mean flow data in each overlapping window)
 % fullCoords (Full domain)
